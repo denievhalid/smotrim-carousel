@@ -7,23 +7,21 @@ export default function usePerson() {
   const loading = ref(true);
 
   const fetchPersons = () => {
-    loading.value = true;
-    return api
-      .get("/boxes/vesti2")
-      .then(
-        ({
-          data: {
-            data: { content },
-          },
-        }) => {
-          if (Array.isArray(content)) {
-            persons.value.push(
-              ...content.find((item) => item.id === PERSONS_ID).content
-            );
-          }
+    return api.get("/boxes/vesti2").then(
+      ({
+        data: {
+          data: { content },
+        },
+      }) => {
+        if (Array.isArray(content)) {
+          persons.value.push(
+            ...content.find((item) => item.id === PERSONS_ID).content
+          );
+
+          loading.value = false;
         }
-      )
-      .finally(() => (loading.value = false));
+      }
+    );
   };
 
   return {

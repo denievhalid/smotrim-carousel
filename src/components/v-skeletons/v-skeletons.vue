@@ -31,7 +31,7 @@
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
-  top: 4px;
+  top: -1px;
 
   &__item {
     display: flex;
