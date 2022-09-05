@@ -7,9 +7,15 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "core-js": "^3.6.5",
+    "slick-vuejs": "^1.0.9",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-skeletor": "^1.0.6",
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-carousel": "^0.1.46",
+    "vue3-slick-carousel": "^1.0.6",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

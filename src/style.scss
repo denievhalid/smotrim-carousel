@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "RFDewiBold";
+  src: local("RF Dewi Semibold"), local("RF-Dewi-Semibold"),
+    url("./fonts/RFDewi-Semibold.woff2") format("woff2"),
+    url("/fonts/RFDewi-Semibold.woff") format("woff"),
+    url("/fonts/RFDewi-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --border-radius: 8px;
+  --white-color: white;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  font-family: RFDewiBold, serif;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 1758px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel__next {
+  right: 8px;
+  top: 80px;
+}
+.carousel__prev {
+  left: 8px;
+  top: 80px;
+}
+.carousel__icon path {
+  fill: #000;
+}
+
+.carousel__prev,
+.carousel__next {
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background-color: var(--white-color);
+}
+
+.carousel__prev--in-active,
+.carousel__next--in-active {
+  display: none;
+}

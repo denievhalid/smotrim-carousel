@@ -1,6 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { Skeletor } from "vue-skeletor";
+import "./style.scss";
+import "vue-skeletor/dist/vue-skeletor.css";
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).component("Skeletor", Skeletor).mount("#app");
